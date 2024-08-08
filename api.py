@@ -22,7 +22,7 @@ def get_livro(id):
 
 @app.route('/api/livros', methods=['POST'])
 def add_livro():
-    novo_livro = request.grt_json
+    novo_livro = request.get_json()
     livros.append(novo_livro)
     return jsonify(novo_livro), 201
 
